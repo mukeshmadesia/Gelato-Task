@@ -16,7 +16,8 @@ Task 3 - API Testing
        "API-Test-Cases.xlsx"    - Refer the excelsheet for TestCases
     
     
-Task 4 - Selenium with Python This Project is to test the following functionlity of Book Store Application Registration, https://demoqa.com/register authentication(login) https://demoqa.com/login Search https://demoqa.com/books
+Task 4 - UI Tetsing
+Selenium with Python This Project is to test the following functionlity of Book Store Application Registration, https://demoqa.com/register authentication(login) https://demoqa.com/login Search https://demoqa.com/books
 
 **Approach Deatils:
 
