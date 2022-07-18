@@ -1,6 +1,7 @@
 # Gelato-Task
 
 Task 1 - Application testing
+
   Part 1- "Test Cases.xlsx" - for test cases
   Part 3- Python code to generate mock data randomly.
 
@@ -33,7 +34,7 @@ Sprint 1 : -
 **Sprint 2: **
 
 1. Created a data driven framework based on Page Object Model using Selenium and Python
-/NEP 
+/Gelato 
     /demoqaConfig 
         /Config.json  - Contains url and other static data required
         
