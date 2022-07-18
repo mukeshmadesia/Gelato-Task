@@ -1,0 +1,154 @@
+{
+	"id": "33a942aa-9e94-479a-8291-61d970a5e2c5",
+	"name": "Gelato-Task",
+	"timestamp": "2022-07-17T13:14:38.574Z",
+	"collection_id": "21115828-da4859e1-ecac-476d-83ef-2a1489d3ba49",
+	"folder_id": 0,
+	"environment_id": "21115828-8e4e06be-39fc-4208-9bcc-34d2522ea9ea",
+	"totalPass": 6,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "b8efbe56-c52c-44ba-8e62-33afd846a95b",
+			"name": "Pass-Current Weather",
+			"url": "http://api.weatherstack.com/current?access_key=208d90dd121c5ef8222aebef797ceb9e&query=New%20York",
+			"time": 152,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Test Current Weather": true
+			},
+			"testPassFailCounts": {
+				"Test Current Weather": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				152
+			],
+			"allTests": [
+				{
+					"Test Current Weather": true
+				}
+			]
+		},
+		{
+			"id": "e326774e-f4bb-424d-a7dd-2aadea47ba5d",
+			"name": "Access Restricted",
+			"url": "http://api.weatherstack.com/historical?access_key=208d90dd121c5ef8222aebef797ceb9e&query=New%20York&historical_date=2015-01-21&hourly=1",
+			"time": 140,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Plan not supported": true
+			},
+			"testPassFailCounts": {
+				"Plan not supported": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				140
+			],
+			"allTests": [
+				{
+					"Plan not supported": true
+				}
+			]
+		},
+		{
+			"id": "6d1df58f-f2d8-462d-82cb-fb2d3ff3e3d9",
+			"name": "Bulk Request",
+			"url": "http://api.weatherstack.com/current?access_key=208d90dd121c5ef8222aebef797ceb9e&query=London;Singapur;Shanghai",
+			"time": 142,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"New User Created": true,
+				"Bulk Query not supported": true
+			},
+			"testPassFailCounts": {
+				"New User Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Bulk Query not supported": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				142
+			],
+			"allTests": [
+				{
+					"New User Created": true,
+					"Bulk Query not supported": true
+				}
+			]
+		},
+		{
+			"id": "fd71891f-ff9f-4490-b666-9829b1014960",
+			"name": "Access Key not Provided",
+			"url": "http://api.weatherstack.com/current?query=Londan",
+			"time": 135,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"New User Created": true,
+				"API Access key not Provided": true
+			},
+			"testPassFailCounts": {
+				"New User Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"API Access key not Provided": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				135
+			],
+			"allTests": [
+				{
+					"New User Created": true,
+					"API Access key not Provided": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 569,
+	"collection": {
+		"requests": [
+			{
+				"id": "b8efbe56-c52c-44ba-8e62-33afd846a95b",
+				"method": "GET"
+			},
+			{
+				"id": "e326774e-f4bb-424d-a7dd-2aadea47ba5d",
+				"method": "GET"
+			},
+			{
+				"id": "6d1df58f-f2d8-462d-82cb-fb2d3ff3e3d9",
+				"method": "GET"
+			},
+			{
+				"id": "fd71891f-ff9f-4490-b666-9829b1014960",
+				"method": "GET"
+			}
+		]
+	}
+}

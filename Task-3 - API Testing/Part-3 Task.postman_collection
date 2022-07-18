@@ -1,0 +1,658 @@
+{
+	"info": {
+		"_postman_id": "da4859e1-ecac-476d-83ef-2a1489d3ba49",
+		"name": "Gelato-Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21115828"
+	},
+	"item": [
+		{
+			"name": "Pass-Current Weather",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"res = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Test Current Weather\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"  \r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.weatherstack.com/current?access_key={{accesskey}}&query=New York",
+					"protocol": "http",
+					"host": [
+						"api",
+						"weatherstack",
+						"com"
+					],
+					"path": [
+						"current"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "{{accesskey}}"
+						},
+						{
+							"key": "query",
+							"value": "New York"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Pass-Current Weather",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.weatherstack.com/current?access_key=208d90dd121c5ef8222aebef797ceb9e&query=New York",
+							"protocol": "http",
+							"host": [
+								"api",
+								"weatherstack",
+								"com"
+							],
+							"path": [
+								"current"
+							],
+							"query": [
+								{
+									"key": "access_key",
+									"value": "208d90dd121c5ef8222aebef797ceb9e"
+								},
+								{
+									"key": "query",
+									"value": "New York"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 17 Jul 2022 12:07:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; Charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-apilayer-transaction-id",
+							"value": "ac5299fa-f95e-447b-82a0-7bb175ac461f"
+						},
+						{
+							"key": "access-control-allow-methods",
+							"value": "GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "x-request-time",
+							"value": "0.014"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=iYvepupkmf3MVH8rrfyoVXLCrDwTQifBOqCuX1j68NOeX2dQnrdRlH5VMyitN3aChGwtKOUPDi7DElyx3nwxF2c6HHOk1rw2QuhNqZJC7sRc0Uu9s6Z9nmJA%2BTG0r%2FrxUcF3e6swcA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "72c2dc450f3ab500-OSL"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"request\": {\n        \"type\": \"City\",\n        \"query\": \"New York, United States of America\",\n        \"language\": \"en\",\n        \"unit\": \"m\"\n    },\n    \"location\": {\n        \"name\": \"New York\",\n        \"country\": \"United States of America\",\n        \"region\": \"New York\",\n        \"lat\": \"40.714\",\n        \"lon\": \"-74.006\",\n        \"timezone_id\": \"America/New_York\",\n        \"localtime\": \"2022-07-17 08:06\",\n        \"localtime_epoch\": 1658045160,\n        \"utc_offset\": \"-4.0\"\n    },\n    \"current\": {\n        \"observation_time\": \"12:06 PM\",\n        \"temperature\": 24,\n        \"weather_code\": 116,\n        \"weather_icons\": [\n            \"https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png\"\n        ],\n        \"weather_descriptions\": [\n            \"Partly cloudy\"\n        ],\n        \"wind_speed\": 6,\n        \"wind_degree\": 200,\n        \"wind_dir\": \"SSW\",\n        \"pressure\": 1016,\n        \"precip\": 0.2,\n        \"humidity\": 69,\n        \"cloudcover\": 75,\n        \"feelslike\": 26,\n        \"uv_index\": 5,\n        \"visibility\": 16,\n        \"is_day\": \"yes\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Access Restricted",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var res = pm.response.json();\r",
+							"pm.test(\"Plan not supported\", function () {\r",
+							"    pm.expect(res.error.info).to.eql(\"Your current subscription plan does not support historical weather data. Please upgrade your account to use this feature.\");\r",
+							"   \r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"var schema = {\r",
+							"    \"items\": {\r",
+							"        \"type\": \"boolean\"\r",
+							"    }\r",
+							"};\r",
+							"\r",
+							"var data1 = [true, false];\r",
+							"var data2 = [true, 123];\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.weatherstack.com/historical?access_key={{accesskey}}&query=New York&historical_date=2015-01-21&hourly=1",
+					"protocol": "http",
+					"host": [
+						"api",
+						"weatherstack",
+						"com"
+					],
+					"path": [
+						"historical"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "{{accesskey}}"
+						},
+						{
+							"key": "query",
+							"value": "New York"
+						},
+						{
+							"key": "historical_date",
+							"value": "2015-01-21"
+						},
+						{
+							"key": "hourly",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Access Restricted",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.weatherstack.com/historical?access_key={{accesskey}}&query=New York&historical_date=2015-01-21&hourly=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weatherstack",
+								"com"
+							],
+							"path": [
+								"historical"
+							],
+							"query": [
+								{
+									"key": "access_key",
+									"value": "{{accesskey}}"
+								},
+								{
+									"key": "query",
+									"value": "New York"
+								},
+								{
+									"key": "historical_date",
+									"value": "2015-01-21"
+								},
+								{
+									"key": "hourly",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 17 Jul 2022 12:15:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; Charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-apilayer-transaction-id",
+							"value": "3b533f9e-312b-41b4-8883-2e7384679e75"
+						},
+						{
+							"key": "access-control-allow-methods",
+							"value": "GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "x-request-time",
+							"value": "0.005"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Xpn0q2DJJPzo2kqGA6NQkIud8f81Mn2qO5lU1tFGxTxGhu4%2BMw4G%2BM%2BVqAuC7XaHRM0HrM%2FezOxUZWAE6hyI6PHDPjjNOAZItiLTOGVfQ920VHbKYvPoMLb5vTxqmEBAW1D0Nynj%2FQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "72c2e7c33f8db518-OSL"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"error\": {\n        \"code\": 105,\n        \"type\": \"https_access_restricted\",\n        \"info\": \"Access Restricted - Your current Subscription Plan does not support HTTPS Encryption.\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Bulk Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var res = pm.response.json();\r",
+							"pm.test(\"New User Created\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Bulk Query not supported\", function () {\r",
+							"    pm.expect(res.error.info).to.eql(\"Your current subscription plan does not support bulk queries. Please upgrade your account to use this feature.\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.weatherstack.com/current?access_key={{accesskey}}&query=London;Singapur;Shanghai",
+					"protocol": "http",
+					"host": [
+						"api",
+						"weatherstack",
+						"com"
+					],
+					"path": [
+						"current"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "{{accesskey}}"
+						},
+						{
+							"key": "query",
+							"value": "London;Singapur;Shanghai"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Bulk Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.weatherstack.com/current?access_key={{accesskey}}&query=London;Singapur;Shanghai",
+							"protocol": "http",
+							"host": [
+								"api",
+								"weatherstack",
+								"com"
+							],
+							"path": [
+								"current"
+							],
+							"query": [
+								{
+									"key": "access_key",
+									"value": "{{accesskey}}"
+								},
+								{
+									"key": "query",
+									"value": "London;Singapur;Shanghai"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 17 Jul 2022 12:18:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; Charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-apilayer-transaction-id",
+							"value": "d1445474-656c-4af5-a0f1-536820be006e"
+						},
+						{
+							"key": "access-control-allow-methods",
+							"value": "GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "x-request-time",
+							"value": "0.009"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=xANviYKsqiO2DiM36UPnxhvn3UfeCygV%2FtuMnLzmLvmVKNOK2Ylrc%2FJULZ6iOSEeHppyWXPGk4SiwTYyUycTwQ1DHhgTWn6UCoDguYK8eUbVEo2wSBn4v1tXfLiejBpZ0NfSD3D5xA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "72c2ec5c8af6b4ee-OSL"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"error\": {\n        \"code\": 604,\n        \"type\": \"bulk_queries_not_supported_on_plan\",\n        \"info\": \"Your current subscription plan does not support bulk queries. Please upgrade your account to use this feature.\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Access Key not Provided",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"res = pm.response.json();\r",
+							"pm.test(\"New User Created\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"API Access key not Provided\", function () {\r",
+							"    pm.expect(res.error.info).to.eql(\"You have not supplied an API Access Key. [Required format: access_key=YOUR_ACCESS_KEY]\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.weatherstack.com/current?query=Londan",
+					"protocol": "http",
+					"host": [
+						"api",
+						"weatherstack",
+						"com"
+					],
+					"path": [
+						"current"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "query",
+							"value": "Londan"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Access Key not Provided",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.weatherstack.com/current?query=Londan",
+							"protocol": "http",
+							"host": [
+								"api",
+								"weatherstack",
+								"com"
+							],
+							"path": [
+								"current"
+							],
+							"query": [
+								{
+									"key": "access_key",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "Londan"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 17 Jul 2022 12:26:29 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; Charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "access-control-allow-methods",
+							"value": "GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "x-blocked-at-loadbalancer",
+							"value": "1"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=DoTdspdDOAp5naN%2FEx2AuJ7IcsDWOe1H7FCpj7awXw57gY0VAZ5%2FNQ185hILezBr%2BisDiFbHtsBeVzMswiuLbSA07vuoELwLtOZyYcKd5DwdJ40s%2B15MbpNRuHCUZoLd20aoYlgBaQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "72c2f75dab18b4ee-OSL"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"error\": {\n        \"code\": 101,\n        \"type\": \"missing_access_key\",\n        \"info\": \"You have not supplied an API Access Key. [Required format: access_key=YOUR_ACCESS_KEY]\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "accesskey",
+			"value": "208d90dd121c5ef8222aebef797ceb9e"
+		}
+	]
+}
